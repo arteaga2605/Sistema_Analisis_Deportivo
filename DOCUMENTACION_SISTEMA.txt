@@ -1,0 +1,82 @@
+============================================================
+SISTEMA DE ANÁLISIS DEPORTIVO
+============================================================
+
+1. DESCRIPCIÓN GENERAL
+   Sistema modular de análisis deportivo con múltiples fuentes de datos, 
+   dos analistas con modelos distintos, gestor de riesgo, creador de tickets 
+   y gestor de banca dinámico. Permite obtener predicciones, seleccionar 
+   apuestas combinadas, gestionar inversiones y evaluar resultados.
+
+2. EMPLEADOS (MÓDULOS)
+   - Analista Deportivo (AnalistaPrincipal): modelo basado en récord reciente.
+   - Analista Avanzado (AnalistaAlternativo): modelo con regresión y factores recientes.
+   - Gestor de Riesgo: reparte capital entre predicciones del día.
+   - Creador de Tickets: permite seleccionar juegos y crear apuestas combinadas.
+   - Gestor de Banca Dinámico: aplica Kelly fraccionado para sugerir inversión.
+
+3. FUENTES DE DATOS (Proveedores)
+   - sports-skills (MLB, NFL, NBA, NHL, fútbol)
+   - ESPN (scoreboards)
+   - balldontlie (NBA con API key)
+   - OpenLigaDB (fútbol alemán)
+   - DraftKings (cuotas)
+   - TheSportsDB (múltiples deportes)
+   - NBA Data (data.nba.com)
+   - NHL Stats API (statsapi.web.nhl.com)
+   - BBC Sport (fútbol, scraping con Selenium)
+
+4. ESTRUCTURA DE ARCHIVOS
+   main.py                 - Punto de entrada, maneja comandos
+   config.py               - Configuración global
+   models/
+       prediccion.py       - Clase Prediccion
+       estado.py           - Clase Estado (persistencia)
+       ticket.py           - Clase Ticket
+   analista.py             - Analista principal
+   analista_alternativo.py - Analista avanzado
+   gestor.py               - Gestor de riesgo
+   gestor_banca.py         - Gestor de banca dinámico (nuevo)
+   data_providers.py       - Múltiples proveedores de datos
+   statistics.py           - Estadísticas avanzadas (TeamStats)
+   social_sentiment.py     - Simulación de sentimiento público
+   utils.py                - Funciones auxiliares
+   requirements.txt        - Dependencias Python
+
+5. COMANDOS DISPONIBLES
+   python main.py --predict      - Genera predicciones de ambos analistas
+   python main.py --status       - Muestra capital y predicciones anteriores
+   python main.py --update       - Actualiza resultados del día anterior
+   python main.py --compare      - Compara rendimiento de analistas
+   python main.py --ticket       - Crea un ticket con juegos seleccionados
+   python main.py --help         - Muestra ayuda
+
+6. CONFIGURACIÓN
+   Editar config.py para ajustar:
+   - Capital inicial
+   - Umbral de probabilidad (65% por defecto)
+   - Porcentajes de inversión
+   - API key de balldontlie
+   - Parámetros de Kelly (KELLY_FRACTION, MIN_BET_SIZE, MAX_BET_SIZE)
+   - Activar/desactivar proveedores
+
+7. INSTALACIÓN
+   pip install -r requirements.txt
+   Asegurar que Chrome esté instalado si se usa BBC Sport.
+
+8. FLUJO DE TRABAJO TÍPICO
+   a) python main.py --predict
+   b) python main.py --ticket   (seleccionar juegos, cuotas, etc.)
+   c) El gestor de banca sugiere monto (Kelly fraccionado)
+   d) Confirmar inversión
+   e) Al día siguiente: python main.py --update
+   f) python main.py --status   (ver resultados)
+   g) python main.py --compare  (ver rendimiento de analistas)
+
+9. NOTAS TÉCNICAS
+   - El estado se guarda en estado.json (capital, predicciones, tickets).
+   - Los datos se cachean durante 1 hora para evitar consultas repetidas.
+   - El gestor de banca usa Kelly fraccionado (25% del Kelly completo por defecto).
+   - Los analistas usan datos reales de las fuentes; si fallan, recurren a récord reciente.
+
+============================================================

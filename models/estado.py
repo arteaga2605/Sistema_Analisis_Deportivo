@@ -1,15 +1,14 @@
-# models/estado.py (modificado)
+# models/estado.py
 import json
 from datetime import date, datetime
 from typing import List, Optional, Dict
+
 from config import ARCHIVO_ESTADO, CAPITAL_INICIAL
 from models.prediccion import Prediccion
 from models.ticket import Ticket
 
+
 class Estado:
-    """
-    Maneja el estado persistente de la empresa: capital, historial de predicciones y tickets.
-    """
     def __init__(self):
         self.capital = CAPITAL_INICIAL
         self.predicciones: List[Prediccion] = []
@@ -23,21 +22,8 @@ class Estado:
                 self.capital = data.get('capital', CAPITAL_INICIAL)
                 preds = data.get('predicciones', [])
                 self.predicciones = [Prediccion.from_dict(p) for p in preds]
-                tickets_data = data.get('tickets', [])
-                self.tickets = []
-                for t_data in tickets_data:
-                    # Reconstruir predicciones del ticket (ya están en el dict)
-                    preds_ticket = [Prediccion.from_dict(p) for p in t_data.get('predicciones', [])]
-                    ticket = Ticket(
-                        id_ticket=t_data['id_ticket'],
-                        fecha_creacion=date.fromisoformat(t_data['fecha_creacion']),
-                        predicciones=preds_ticket,
-                        monto_total=t_data['monto_total'],
-                        odds=t_data.get('odds')
-                    )
-                    ticket.estado = t_data.get('estado', 'pendiente')
-                    ticket.ganancia_neta = t_data.get('ganancia_neta', 0.0)
-                    self.tickets.append(ticket)
+                tickets = data.get('tickets', [])
+                self.tickets = [Ticket.from_dict(t) for t in tickets]
         except (FileNotFoundError, json.JSONDecodeError):
             self.guardar()
 
@@ -57,6 +43,9 @@ class Estado:
     def agregar_ticket(self, ticket: Ticket):
         self.tickets.append(ticket)
         self.guardar()
+
+    def obtener_predicciones_por_fecha(self, fecha: date) -> List[Prediccion]:
+        return [p for p in self.predicciones if p.fecha == fecha and p.acerto is None]
 
     def obtener_ultimas_predicciones(self, n: int = None) -> List[Prediccion]:
         if n is None:
@@ -87,6 +76,3 @@ class Estado:
             else:
                 stats[analista]['fallos'] += 1
         return stats
-
-    def obtener_predicciones_por_fecha(self, fecha: date) -> List[Prediccion]:
-        return [p for p in self.predicciones if p.fecha == fecha]

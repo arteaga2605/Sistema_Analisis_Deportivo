@@ -35,3 +35,13 @@ BALDONTLIE_API_KEY = "b0a0657e-9de3-421f-aba5-381e3befef8e"
 ENABLE_BBC_SPORT = True
 BBC_HEADLESS = True          # Ejecutar navegador sin interfaz gráfica
 BBC_TIMEOUT = 30             # Tiempo máximo de espera para cargar la página
+
+# Añadir al final del archivo config.py
+
+# Estrategia de Kelly
+KELLY_FRACTION = 0.25      # 25% del Kelly completo (conservador)
+MIN_BET_SIZE = 0.10        # Monto mínimo a apostar (unidades)
+MAX_BET_SIZE = 5.00        # Monto máximo a apostar (unidades)
+
+# Para el creador de tickets, permitir selección interactiva
+TICKET_SELECCION_INTERACTIVA = True   # True = preguntar por consola

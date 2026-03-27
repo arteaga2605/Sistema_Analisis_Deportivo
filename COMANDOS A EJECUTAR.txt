@@ -1,8 +1,9 @@
-Remove-Item estado.json (BORRA DATOS DE APUESTAS)
-python main.py --predict (MUESTRA JUEGOS)
-python main.py --update (ACTUALIZAR RESULTADOS)
-python main.py --status (CAPITAL DISPONIBLE)
-python main.py --compare (COMPARAR ANALISIS)
-python main.py --status | grep "Analista Avanzado" (FILTRAR POR ANALISTA)
-python main.py --create-ticket (  Crear ticket  )
-python main.py --list-tickets (Ver tickets )
+COMANDOS DISPONIBLES
+   python main.py --predict      - Genera predicciones de ambos analistas
+   python main.py --status       - Muestra capital y predicciones anteriores
+   python main.py --update       - Actualiza resultados del día anterior
+   python main.py --compare      - Compara rendimiento de analistas
+   python main.py --ticket       - Crea un ticket con juegos seleccionados
+   python main.py --help         - Muestra ayuda
+   python main.py --list-tickets - Lista de Tickets
+   Remove-Item estado.json       - BORRA DATOS DE APUESTAS

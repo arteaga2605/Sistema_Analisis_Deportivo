@@ -153,7 +153,8 @@ def ejecutar_prediccion():
 
 def crear_ticket():
     """
-    Permite al usuario crear un ticket seleccionando predicciones del día actual.
+    Permite al usuario crear un ticket seleccionando predicciones del día actual,
+    con recomendación basada en Kelly (Gestor de Banca Dinámico).
     """
     estado = Estado()
     hoy = date.today()
@@ -162,7 +163,7 @@ def crear_ticket():
         print("No hay predicciones para hoy. Ejecute primero '--predict'.")
         return
 
-    print("\n=== CREAR TICKET ===")
+    print("\n=== CREAR TICKET (con Gestor de Banca Dinámico) ===")
     print("Predicciones disponibles para hoy:")
     for idx, pred in enumerate(predicciones_hoy, 1):
         print(f"{idx}. [{pred.analista}] {pred.deporte} | {pred.equipo_local} vs {pred.equipo_visitante}")
@@ -187,16 +188,14 @@ def crear_ticket():
         print("No se seleccionó ninguna predicción válida.")
         return
 
-    # Solicitar monto total y odds (ganancia si acierta)
-    try:
-        monto_total = float(input("Ingrese el monto total a apostar en este ticket: "))
-        if monto_total <= 0:
-            print("Monto debe ser positivo.")
-            return
-    except:
-        print("Monto inválido.")
-        return
+    # Calcular probabilidad combinada del ticket (producto de probabilidades individuales)
+    prob_combinada = 1.0
+    for pred in seleccionados:
+        prob_combinada *= pred.probabilidad
 
+    print(f"\n📊 Probabilidad combinada del ticket: {prob_combinada*100:.2f}%")
+
+    # Solicitar odds totales
     try:
         odds = float(input("Ingrese las odds totales del ticket (ganancia = monto * odds si acierta): "))
         if odds <= 1:
@@ -205,6 +204,36 @@ def crear_ticket():
     except:
         print("Odds inválidas.")
         return
+
+    # Calcular fracción de Kelly
+    # f = p - (1-p)/(odds-1)
+    if odds > 1:
+        kelly_f = prob_combinada - (1 - prob_combinada) / (odds - 1)
+    else:
+        kelly_f = 0
+    # Limitar a valores razonables
+    kelly_f = max(0, min(1, kelly_f))
+    
+    # Factor de riesgo (Kelly fraccionado). Por defecto 25% para ser conservador.
+    riesgo_factor = 0.25
+    monto_sugerido = estado.capital * kelly_f * riesgo_factor
+
+    print(f"\n💡 Recomendación Kelly: fracción óptima = {kelly_f*100:.2f}% del capital")
+    print(f"   Aplicando factor de riesgo {riesgo_factor*100:.0f}%, monto sugerido: {monto_sugerido:.2f}")
+
+    # Solicitar monto total
+    monto_input = input(f"Ingrese el monto total a apostar en este ticket (Enter para usar sugerido {monto_sugerido:.2f}): ")
+    if monto_input.strip() == "":
+        monto_total = monto_sugerido
+    else:
+        try:
+            monto_total = float(monto_input)
+            if monto_total <= 0:
+                print("Monto debe ser positivo.")
+                return
+        except:
+            print("Monto inválido.")
+            return
 
     # Crear ticket
     ticket_id = f"TICKET_{datetime.now().strftime('%Y%m%d%H%M%S')}"
@@ -217,7 +246,7 @@ def crear_ticket():
     )
     estado.agregar_ticket(ticket)
     print(f"\n✅ Ticket creado con ID: {ticket_id}")
-    print(f"   Apuesta: {monto_total:.2f} | Odds: {odds:.2f}")
+    print(f"   Apuesta: {monto_total:.2f} | Odds: {odds:.2f} | Probabilidad combinada: {prob_combinada*100:.2f}%")
     print("   Partidos incluidos:")
     for pred in seleccionados:
         print(f"   - {pred.equipo_local} vs {pred.equipo_visitante} -> {pred.ganador_predicho}")
@@ -304,7 +333,6 @@ def main():
     elif args.list_tickets:
         listar_tickets()
     else:
-        # Por defecto, mostrar ayuda
         parser.print_help()
 
 

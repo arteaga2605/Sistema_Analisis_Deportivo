@@ -684,6 +684,44 @@
       "odds": 2.0,
       "estado": "pendiente",
       "ganancia_neta": 0.0
+    },
+    {
+      "id_ticket": "TICKET_20260327112240",
+      "fecha_creacion": "2026-03-27",
+      "predicciones": [
+        {
+          "fecha": "2026-03-27",
+          "equipo_local": "Toronto Blue Jays",
+          "equipo_visitante": "Athletics",
+          "ganador_predicho": "Toronto Blue Jays",
+          "probabilidad": 0.7452020202020202,
+          "deporte": "⚾ MLB",
+          "marcador_estimado": null,
+          "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 74.5% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Toronto Blue Jays 55.6% vs Athletics 45.5%\n• Récord últimos 5 días: Toronto Blue Jays 100.0% vs Athletics 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Toronto Blue Jays 14.0 a favor / 1.0 en contra | Athletics 7.5 a favor / 7.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+          "analista": "Analista Avanzado",
+          "resultado_real": null,
+          "acerto": null,
+          "monto_invertido": 0.022727272727272728
+        },
+        {
+          "fecha": "2026-03-27",
+          "equipo_local": "Los Angeles Lakers",
+          "equipo_visitante": "Brooklyn Nets",
+          "ganador_predicho": "Los Angeles Lakers",
+          "probabilidad": 0.8035714285714286,
+          "deporte": "🏀 NBA",
+          "marcador_estimado": null,
+          "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 80.4% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Los Angeles Lakers 71.4% vs Brooklyn Nets 57.1%\n• Récord últimos 5 días: Los Angeles Lakers 50.0% vs Brooklyn Nets 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Los Angeles Lakers 123.5 a favor / 121.5 en contra | Brooklyn Nets 109.0 a favor / 123.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+          "analista": "Analista Avanzado",
+          "resultado_real": null,
+          "acerto": null,
+          "monto_invertido": 0.022727272727272728
+        }
+      ],
+      "monto_total": 0.5,
+      "odds": 2.0,
+      "estado": "pendiente",
+      "ganancia_neta": null
     }
   ]
 }
