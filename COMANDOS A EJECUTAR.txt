@@ -1,0 +1,8 @@
+Remove-Item estado.json (BORRA DATOS DE APUESTAS)
+python main.py --predict (MUESTRA JUEGOS)
+python main.py --update (ACTUALIZAR RESULTADOS)
+python main.py --status (CAPITAL DISPONIBLE)
+python main.py --compare (COMPARAR ANALISIS)
+python main.py --status | grep "Analista Avanzado" (FILTRAR POR ANALISTA)
+python main.py --create-ticket (  Crear ticket  )
+python main.py --list-tickets (Ver tickets )
