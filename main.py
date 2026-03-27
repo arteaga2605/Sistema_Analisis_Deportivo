@@ -11,6 +11,7 @@ from analista_alternativo import AnalistaAlternativo
 from gestor import GestorRiesgo
 from apis import get_schedule_by_date, get_game_details
 from config import USE_MULTI_PROVIDER, UMBRAL_PROBABILIDAD
+from auditor import AuditorResultados   # Nuevo empleado
 
 if USE_MULTI_PROVIDER:
     from data_providers import DataProviderManager
@@ -84,8 +85,6 @@ def actualizar_estado_con_resultados(estado: Estado, fecha: date):
         todas_acertaron = True
         for pred in ticket.predicciones:
             # Buscar la predicción actualizada en el estado
-            # Nota: la predicción en el ticket puede no tener el resultado actualizado.
-            # Buscamos por equipo y fecha.
             pred_actualizada = None
             for p in estado.predicciones:
                 if p.fecha == fecha and p.equipo_local == pred.equipo_local and p.equipo_visitante == pred.equipo_visitante:
@@ -99,7 +98,7 @@ def actualizar_estado_con_resultados(estado: Estado, fecha: date):
                 break
         if todas_acertaron:
             ticket.estado = "ganado"
-            ticket.ganancia_neta = ticket.monto_total * (ticket.odds - 1)  # ganancia neta
+            ticket.ganancia_neta = ticket.monto_total * (ticket.odds - 1)
             estado.capital += ticket.monto_total * ticket.odds
             print(f"✅ Ticket {ticket.id_ticket} ganado! Ganancia neta: +{ticket.ganancia_neta:.2f}")
         else:
@@ -153,8 +152,8 @@ def ejecutar_prediccion():
 
 def crear_ticket():
     """
-    Permite al usuario crear un ticket seleccionando predicciones del día actual,
-    con recomendación basada en Kelly (Gestor de Banca Dinámico).
+    Permite al usuario crear un ticket seleccionando predicciones del día actual.
+    Incluye sugerencia de Kelly (Gestor de Banca Dinámico).
     """
     estado = Estado()
     hoy = date.today()
@@ -163,7 +162,7 @@ def crear_ticket():
         print("No hay predicciones para hoy. Ejecute primero '--predict'.")
         return
 
-    print("\n=== CREAR TICKET (con Gestor de Banca Dinámico) ===")
+    print("\n=== CREAR TICKET ===")
     print("Predicciones disponibles para hoy:")
     for idx, pred in enumerate(predicciones_hoy, 1):
         print(f"{idx}. [{pred.analista}] {pred.deporte} | {pred.equipo_local} vs {pred.equipo_visitante}")
@@ -171,7 +170,6 @@ def crear_ticket():
         print(f"   Comentario: {pred.comentario}")
         print("-" * 50)
 
-    # Seleccionar predicciones
     seleccion = input("\nIngrese los números de las predicciones que desea incluir en el ticket (separados por comas, ej: 1,3,5): ")
     try:
         indices = [int(x.strip()) for x in seleccion.split(',')]
@@ -188,14 +186,13 @@ def crear_ticket():
         print("No se seleccionó ninguna predicción válida.")
         return
 
-    # Calcular probabilidad combinada del ticket (producto de probabilidades individuales)
+    # Calcular probabilidad combinada (suponiendo independencia)
     prob_combinada = 1.0
-    for pred in seleccionados:
-        prob_combinada *= pred.probabilidad
+    for p in seleccionados:
+        prob_combinada *= p.probabilidad
+    print(f"\n📊 Probabilidad combinada estimada: {prob_combinada*100:.2f}%")
 
-    print(f"\n📊 Probabilidad combinada del ticket: {prob_combinada*100:.2f}%")
-
-    # Solicitar odds totales
+    # Solicitar odds
     try:
         odds = float(input("Ingrese las odds totales del ticket (ganancia = monto * odds si acierta): "))
         if odds <= 1:
@@ -205,29 +202,27 @@ def crear_ticket():
         print("Odds inválidas.")
         return
 
-    # Calcular fracción de Kelly
-    # f = p - (1-p)/(odds-1)
-    if odds > 1:
-        kelly_f = prob_combinada - (1 - prob_combinada) / (odds - 1)
+    # Cálculo de Kelly
+    p = prob_combinada
+    q = 1 - p
+    b = odds - 1  # ganancia neta por unidad apostada
+    if b > 0:
+        kelly = (p * b - q) / b
     else:
-        kelly_f = 0
-    # Limitar a valores razonables
-    kelly_f = max(0, min(1, kelly_f))
-    
-    # Factor de riesgo (Kelly fraccionado). Por defecto 25% para ser conservador.
-    riesgo_factor = 0.25
-    monto_sugerido = estado.capital * kelly_f * riesgo_factor
+        kelly = 0
+    kelly = max(0, min(1, kelly))  # limitar entre 0 y 1
+    kelly_fraccionado = kelly * 0.25  # Kelly fraccionado (25% para reducir riesgo)
 
-    print(f"\n💡 Recomendación Kelly: fracción óptima = {kelly_f*100:.2f}% del capital")
-    print(f"   Aplicando factor de riesgo {riesgo_factor*100:.0f}%, monto sugerido: {monto_sugerido:.2f}")
+    print(f"\n💡 Sugerencia de Kelly: {kelly*100:.2f}% de tu capital actual ({estado.capital:.2f})")
+    print(f"   Kelly fraccionado (25%): {kelly_fraccionado*100:.2f}% → {estado.capital * kelly_fraccionado:.2f}")
 
-    # Solicitar monto total
-    monto_input = input(f"Ingrese el monto total a apostar en este ticket (Enter para usar sugerido {monto_sugerido:.2f}): ")
-    if monto_input.strip() == "":
-        monto_total = monto_sugerido
+    usar_sugerencia = input("¿Deseas usar la sugerencia de Kelly? (s/n): ").strip().lower()
+    if usar_sugerencia in ['s', 'si', 'y', 'yes']:
+        monto_total = estado.capital * kelly_fraccionado
+        print(f"Monto sugerido: {monto_total:.2f}")
     else:
         try:
-            monto_total = float(monto_input)
+            monto_total = float(input("Ingrese el monto total a apostar en este ticket: "))
             if monto_total <= 0:
                 print("Monto debe ser positivo.")
                 return
@@ -246,16 +241,13 @@ def crear_ticket():
     )
     estado.agregar_ticket(ticket)
     print(f"\n✅ Ticket creado con ID: {ticket_id}")
-    print(f"   Apuesta: {monto_total:.2f} | Odds: {odds:.2f} | Probabilidad combinada: {prob_combinada*100:.2f}%")
+    print(f"   Apuesta: {monto_total:.2f} | Odds: {odds:.2f}")
     print("   Partidos incluidos:")
     for pred in seleccionados:
         print(f"   - {pred.equipo_local} vs {pred.equipo_visitante} -> {pred.ganador_predicho}")
 
 
 def listar_tickets():
-    """
-    Muestra todos los tickets creados.
-    """
     estado = Estado()
     if not estado.tickets:
         print("No hay tickets registrados.")
@@ -318,6 +310,7 @@ def main():
     parser.add_argument('--compare', action='store_true', help='Comparar rendimiento de analistas')
     parser.add_argument('--create-ticket', action='store_true', help='Crear un ticket con predicciones del día')
     parser.add_argument('--list-tickets', action='store_true', help='Listar todos los tickets creados')
+    parser.add_argument('--report', action='store_true', help='Generar informe de rendimiento (Auditor de Resultados)')
     args = parser.parse_args()
 
     if args.predict:
@@ -332,6 +325,10 @@ def main():
         crear_ticket()
     elif args.list_tickets:
         listar_tickets()
+    elif args.report:
+        estado = Estado()
+        auditor = AuditorResultados(estado)
+        auditor.generar_reporte_completo(guardar_grafico=True)
     else:
         parser.print_help()
 

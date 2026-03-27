@@ -3,3 +3,4 @@ beautifulsoup4>=4.11.0
 selenium>=4.8.0
 webdriver-manager>=3.9.0
 sports-skills>=0.1.0   # Opcional, mejora cobertura
+matplotlib>=3.5.0
