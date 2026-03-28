@@ -32,7 +32,7 @@ ENABLE_SPORTS_SKILLS = True
 BALDONTLIE_API_KEY = "b0a0657e-9de3-421f-aba5-381e3befef8e"
 
 # BBC Sport scraping
-ENABLE_BBC_SPORT = True
+ENABLE_BBC_SPORT = False
 BBC_HEADLESS = True          # Ejecutar navegador sin interfaz gráfica
 BBC_TIMEOUT = 30             # Tiempo máximo de espera para cargar la página
 
@@ -45,3 +45,7 @@ MAX_BET_SIZE = 5.00        # Monto máximo a apostar (unidades)
 
 # Para el creador de tickets, permitir selección interactiva
 TICKET_SELECCION_INTERACTIVA = True   # True = preguntar por consola
+
+# Configuración para sentimiento real de redes sociales
+ENABLE_SOCIAL_SENTIMENT = True  # Activar análisis real con Xpoz + VADER
+XPOZ_TOKEN = "K3BYC00RUorb213lokkDwORYimFtLbgWqw7lpbI5MOGdzCpjBGmnUFuP4skBKu6GMuuVhu9"  # Token personal de Xpoz (obtener en https://xpoz.ai)

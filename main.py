@@ -8,10 +8,13 @@ from models import Estado, Prediccion
 from models.ticket import Ticket
 from analista import AnalistaDeportivo
 from analista_alternativo import AnalistaAlternativo
+from analista_futbol import AnalistaFutbol
 from gestor import GestorRiesgo
 from apis import get_schedule_by_date, get_game_details
 from config import USE_MULTI_PROVIDER, UMBRAL_PROBABILIDAD
-from auditor import AuditorResultados   # Nuevo empleado
+from auditor import AuditorResultados
+from analista_tickets import TicketAnalyst   # <-- NUEVO
+from animacion import mostrar_animacion
 
 if USE_MULTI_PROVIDER:
     from data_providers import DataProviderManager
@@ -58,11 +61,7 @@ def obtener_resultados_mlb_api(fecha: date) -> dict:
 
 
 def actualizar_estado_con_resultados(estado: Estado, fecha: date):
-    """
-    Actualiza predicciones y tickets con resultados reales.
-    """
     resultados = obtener_resultados_reales(fecha)
-    # Actualizar predicciones individuales
     for pred in estado.predicciones:
         if pred.fecha != fecha:
             continue
@@ -74,17 +73,13 @@ def actualizar_estado_con_resultados(estado: Estado, fecha: date):
         pred.resultado_real = f"{ganador_real} ({marcador})"
         acerto = (pred.ganador_predicho == ganador_real)
         pred.acerto = acerto
-        # El capital ya se ajustó con los tickets; aquí solo actualizamos predicciones
-    # Actualizar tickets
     for ticket in estado.tickets:
         if ticket.fecha_creacion != fecha:
             continue
         if ticket.estado != "pendiente":
             continue
-        # Verificar si todas las predicciones del ticket acertaron
         todas_acertaron = True
         for pred in ticket.predicciones:
-            # Buscar la predicción actualizada en el estado
             pred_actualizada = None
             for p in estado.predicciones:
                 if p.fecha == fecha and p.equipo_local == pred.equipo_local and p.equipo_visitante == pred.equipo_visitante:
@@ -111,6 +106,7 @@ def actualizar_estado_con_resultados(estado: Estado, fecha: date):
 
 
 def ejecutar_prediccion():
+    mostrar_animacion('predict')
     print("=== SISTEMA DE ANÁLISIS DEPORTIVO - FASE DE PREDICCIÓN ===")
     estado = Estado()
     analista1 = AnalistaDeportivo()
@@ -143,7 +139,6 @@ def ejecutar_prediccion():
     print(f"\n💰 TOTAL A INVERTIR HOY: {total_invertido:.2f}")
     print(f"💵 CAPITAL RESTANTE (después de inversiones): {estado.capital - total_invertido:.2f}")
 
-    # Guardar predicciones
     for pred in todas_predicciones:
         estado.agregar_prediccion(pred)
 
@@ -151,10 +146,7 @@ def ejecutar_prediccion():
 
 
 def crear_ticket():
-    """
-    Permite al usuario crear un ticket seleccionando predicciones del día actual.
-    Incluye sugerencia de Kelly (Gestor de Banca Dinámico).
-    """
+    mostrar_animacion('ticket')
     estado = Estado()
     hoy = date.today()
     predicciones_hoy = estado.obtener_predicciones_por_fecha(hoy)
@@ -186,13 +178,11 @@ def crear_ticket():
         print("No se seleccionó ninguna predicción válida.")
         return
 
-    # Calcular probabilidad combinada (suponiendo independencia)
     prob_combinada = 1.0
     for p in seleccionados:
         prob_combinada *= p.probabilidad
     print(f"\n📊 Probabilidad combinada estimada: {prob_combinada*100:.2f}%")
 
-    # Solicitar odds
     try:
         odds = float(input("Ingrese las odds totales del ticket (ganancia = monto * odds si acierta): "))
         if odds <= 1:
@@ -202,16 +192,15 @@ def crear_ticket():
         print("Odds inválidas.")
         return
 
-    # Cálculo de Kelly
     p = prob_combinada
     q = 1 - p
-    b = odds - 1  # ganancia neta por unidad apostada
+    b = odds - 1
     if b > 0:
         kelly = (p * b - q) / b
     else:
         kelly = 0
-    kelly = max(0, min(1, kelly))  # limitar entre 0 y 1
-    kelly_fraccionado = kelly * 0.25  # Kelly fraccionado (25% para reducir riesgo)
+    kelly = max(0, min(1, kelly))
+    kelly_fraccionado = kelly * 0.25
 
     print(f"\n💡 Sugerencia de Kelly: {kelly*100:.2f}% de tu capital actual ({estado.capital:.2f})")
     print(f"   Kelly fraccionado (25%): {kelly_fraccionado*100:.2f}% → {estado.capital * kelly_fraccionado:.2f}")
@@ -230,7 +219,6 @@ def crear_ticket():
             print("Monto inválido.")
             return
 
-    # Crear ticket
     ticket_id = f"TICKET_{datetime.now().strftime('%Y%m%d%H%M%S')}"
     ticket = Ticket(
         id_ticket=ticket_id,
@@ -262,6 +250,7 @@ def listar_tickets():
 
 
 def mostrar_comparativa():
+    mostrar_animacion('compare')
     estado = Estado()
     stats = estado.obtener_estadisticas_analistas()
     print("\n=== COMPARATIVA DE ANALISTAS ===")
@@ -275,6 +264,7 @@ def mostrar_comparativa():
 
 
 def ejecutar_actualizacion():
+    mostrar_animacion('update')
     print("=== SISTEMA DE ANÁLISIS DEPORTIVO - ACTUALIZACIÓN DE RESULTADOS ===")
     estado = Estado()
     fecha = date.today() - timedelta(days=1)
@@ -283,6 +273,7 @@ def ejecutar_actualizacion():
 
 
 def mostrar_estado():
+    mostrar_animacion('status')
     estado = Estado()
     print("=== ESTADO DE LA EMPRESA ===")
     print(f"💰 Capital actual: {estado.capital:.2f}")
@@ -302,6 +293,39 @@ def mostrar_estado():
     print(f"\n⚠️ Racha actual de fallos: {estado.contar_racha_fallos()}")
 
 
+def ejecutar_prediccion_soccer():
+    mostrar_animacion('soccer')
+    print("=== ANÁLISIS EXCLUSIVO DE FÚTBOL ===")
+    estado = Estado()
+    analista = AnalistaFutbol()
+    hoy = date.today()
+    predicciones = analista.analizar_juegos_dia(hoy)
+    if not predicciones:
+        print("No hay predicciones de fútbol con suficiente probabilidad para hoy.")
+        return
+
+    print("\n📊 PREDICCIONES DE FÚTBOL PARA HOY:")
+    print("=" * 90)
+    for pred in predicciones:
+        condicion = "🏠 LOCAL" if pred.ganador_predicho == pred.equipo_local else "✈️ VISITANTE"
+        print(f"🎯 [{pred.analista}] {pred.deporte} | {pred.equipo_local} vs {pred.equipo_visitante}")
+        print(f"   📈 Predicción: {pred.ganador_predicho} ({condicion}) con {pred.probabilidad*100:.1f}%")
+        print(f"   💬 Comentario: {pred.comentario}")
+        print("-" * 90)
+
+    for pred in predicciones:
+        estado.agregar_prediccion(pred)
+    print("\n✅ Predicciones guardadas.")
+
+
+def analizar_tickets():
+    """Ejecuta el analista de tickets para evaluar tickets activos."""
+    mostrar_animacion('ticket_analyst')
+    print("=== ANÁLISIS DE TICKETS ACTIVOS ===")
+    analista = TicketAnalyst()
+    analista.analizar_tickets_activos()
+
+
 def main():
     parser = argparse.ArgumentParser(description='Sistema de análisis deportivo')
     parser.add_argument('--predict', action='store_true', help='Ejecutar fase de predicción (juegos del día)')
@@ -311,6 +335,8 @@ def main():
     parser.add_argument('--create-ticket', action='store_true', help='Crear un ticket con predicciones del día')
     parser.add_argument('--list-tickets', action='store_true', help='Listar todos los tickets creados')
     parser.add_argument('--report', action='store_true', help='Generar informe de rendimiento (Auditor de Resultados)')
+    parser.add_argument('--soccer', action='store_true', help='Ejecutar análisis exclusivo de fútbol (Analista Fútbol)')
+    parser.add_argument('--analyze-tickets', action='store_true', help='Analizar tickets activos (probabilidad real + sentimiento social)')
     args = parser.parse_args()
 
     if args.predict:
@@ -326,9 +352,14 @@ def main():
     elif args.list_tickets:
         listar_tickets()
     elif args.report:
+        mostrar_animacion('report')
         estado = Estado()
         auditor = AuditorResultados(estado)
         auditor.generar_reporte_completo(guardar_grafico=True)
+    elif args.soccer:
+        ejecutar_prediccion_soccer()
+    elif args.analyze_tickets:
+        analizar_tickets()
     else:
         parser.print_help()
 

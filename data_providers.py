@@ -18,7 +18,6 @@ import json
 from datetime import datetime, date, timedelta
 from typing import List, Dict, Any, Optional
 import time
-import re
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -124,18 +123,18 @@ class ESPNProvider(BaseDataProvider):
 
     def get_games_by_date(self, target_date: date) -> List[Dict[str, Any]]:
         games = []
-        sports = ["baseball/mlb", "football/nfl", "basketball/nba", "hockey/nhl"]
-        sport_map = {
+        date_param = target_date.strftime("%Y%m%d")
+        params = {"dates": date_param, "region": "us", "lang": "en"}
+
+        sports = {
             "baseball/mlb": "mlb",
             "football/nfl": "nfl",
             "basketball/nba": "nba",
             "hockey/nhl": "nhl"
         }
-        for sport_path in sports:
+        for sport_path, sport_code in sports.items():
             try:
-                date_param = target_date.strftime("%Y%m%d")
                 url = f"{self.base_url}/{sport_path}/scoreboard"
-                params = {"dates": date_param, "region": "us", "lang": "en"}
                 response = requests.get(url, params=params, timeout=15)
                 response.raise_for_status()
                 data = response.json()
@@ -149,7 +148,7 @@ class ESPNProvider(BaseDataProvider):
                                     "home_team": comps[0].get("team", {}).get("displayName"),
                                     "away_team": comps[1].get("team", {}).get("displayName"),
                                     "status": event.get("status", {}).get("type", {}).get("state"),
-                                    "sport": sport_map.get(sport_path, "mlb"),
+                                    "sport": sport_code,
                                     "source": self.name
                                 }
                                 if event.get("status", {}).get("type", {}).get("state") == "post":
@@ -159,8 +158,8 @@ class ESPNProvider(BaseDataProvider):
                         except (IndexError, KeyError):
                             continue
             except requests.exceptions.RequestException as e:
-                print(f"Error en ESPN para {sport_path}: {e}")
                 continue
+
         if games:
             self.mark_success()
         else:
@@ -225,37 +224,53 @@ class OpenLigaDBProvider(BaseDataProvider):
 
     def get_games_by_date(self, target_date: date) -> List[Dict[str, Any]]:
         games = []
+        # Calcular temporada: normalmente el año de inicio de la temporada
+        # Para la temporada 2025-2026, el año es 2025. Pero si estamos en marzo 2026,
+        # podemos probar con 2025 y si falla, probar con 2026 (aunque sería inusual).
+        # En lugar de complicar, usamos el año actual restando 1 si es antes de agosto.
+        # Pero para marzo 2026, estamos después de agosto 2025, entonces la temporada es 2025.
+        # Si falla, podemos probar con 2026 como respaldo.
         season = target_date.year
         if target_date.month < 7:
-            season = season - 1
+            season = season - 1  # Estamos en la primera mitad del año, la temporada empezó el año anterior
+        # Intentamos con season; si falla, probamos con season+1
+        seasons_to_try = [season]
+        if target_date.month >= 7:
+            seasons_to_try.append(season+1)  # para casos de transición
+
         for league in self.leagues:
-            try:
-                url = f"{self.base_url}/getmatches/{league}/{season}"
-                response = requests.get(url, timeout=10)
-                response.raise_for_status()
-                data = response.json()
-                for match in data:
-                    try:
-                        match_date = datetime.fromisoformat(match.get("matchDateTime", "")).date()
-                        if match_date == target_date:
-                            game = {
-                                "id": match.get("matchID"),
-                                "home_team": match.get("team1", {}).get("teamName"),
-                                "away_team": match.get("team2", {}).get("teamName"),
-                                "status": "finished" if match.get("matchIsFinished") else "scheduled",
-                                "league": league,
-                                "sport": "soccer",
-                                "source": self.name
-                            }
-                            if match.get("matchIsFinished"):
-                                game["home_score"] = match.get("matchResults", [{}])[0].get("pointsTeam1")
-                                game["away_score"] = match.get("matchResults", [{}])[0].get("pointsTeam2")
-                            games.append(game)
-                    except (KeyError, IndexError, TypeError):
-                        continue
-            except Exception as e:
-                print(f"Error en OpenLigaDB para {league}: {e}")
-                continue
+            for s in seasons_to_try:
+                try:
+                    url = f"{self.base_url}/getmatches/{league}/{s}"
+                    response = requests.get(url, timeout=10)
+                    if response.status_code == 404:
+                        continue  # probar la siguiente temporada
+                    response.raise_for_status()
+                    data = response.json()
+                    for match in data:
+                        try:
+                            match_date = datetime.fromisoformat(match.get("matchDateTime", "")).date()
+                            if match_date == target_date:
+                                game = {
+                                    "id": match.get("matchID"),
+                                    "home_team": match.get("team1", {}).get("teamName"),
+                                    "away_team": match.get("team2", {}).get("teamName"),
+                                    "status": "finished" if match.get("matchIsFinished") else "scheduled",
+                                    "league": league,
+                                    "sport": "soccer",
+                                    "source": self.name
+                                }
+                                if match.get("matchIsFinished"):
+                                    game["home_score"] = match.get("matchResults", [{}])[0].get("pointsTeam1")
+                                    game["away_score"] = match.get("matchResults", [{}])[0].get("pointsTeam2")
+                                games.append(game)
+                        except (KeyError, IndexError, TypeError):
+                            continue
+                    if games:
+                        break  # si encontramos partidos, salir del bucle de temporadas
+                except Exception as e:
+                    print(f"Error en OpenLigaDB para {league}, temporada {s}: {e}")
+                    continue
         if games:
             self.mark_success()
         else:
@@ -678,11 +693,6 @@ class NHLStatsAPIProvider(BaseDataProvider):
 
 
 class BBCSportProvider(BaseDataProvider):
-    """
-    Proveedor para fútbol (soccer) usando scraping de BBC Sport.
-    Extrae fixtures y resultados de la página:
-    https://www.bbc.com/sport/football/scores-fixtures
-    """
     def __init__(self):
         super().__init__("BBC_Sport")
         self.base_url = "https://www.bbc.com/sport/football/scores-fixtures"
@@ -690,7 +700,6 @@ class BBCSportProvider(BaseDataProvider):
         self._games_cache = {}
 
     def _get_driver(self):
-        """Inicializa el driver de Selenium si no está creado."""
         if self._driver is None:
             chrome_options = Options()
             if BBC_HEADLESS:
@@ -704,7 +713,6 @@ class BBCSportProvider(BaseDataProvider):
         return self._driver
 
     def _close_driver(self):
-        """Cierra el driver de Selenium."""
         if self._driver:
             self._driver.quit()
             self._driver = None
@@ -714,47 +722,25 @@ class BBCSportProvider(BaseDataProvider):
             return []
         try:
             driver = self._get_driver()
-            # La URL de BBC Sport no tiene parámetro de fecha, muestra la fecha actual.
-            # Necesitamos cambiar la fecha usando el selector de fechas.
-            driver.get(self.base_url)
-            wait = WebDriverWait(driver, BBC_TIMEOUT)
-            
-            # Esperar a que cargue el selector de fecha (normalmente un input datepicker)
-            # En BBC Sport, la fecha se selecciona mediante botones "previous" y "next"
-            # o un desplegable. Simulamos hacer clic en el botón para navegar al día deseado.
-            # Esto es frágil, pero es un ejemplo.
-            # Primero, encontrar el elemento que muestra la fecha actual.
-            # Intentamos seleccionar la fecha usando JavaScript para simplificar.
-            # Usamos un enfoque más simple: asumimos que la página muestra la fecha actual.
-            # Si no es la fecha que queremos, intentamos cambiar.
-            # Por ahora, si la fecha no es la de hoy, devolvemos lista vacía.
-            # En una implementación completa se manejaría la navegación.
-            # Para este ejemplo, solo procesamos la fecha actual.
             today = date.today()
             if target_date != today:
-                # Si la fecha no es hoy, no podemos obtenerla fácilmente sin navegación compleja.
-                # Podríamos intentar cambiar la URL o hacer clic, pero lo dejamos para más adelante.
+                # Para simplificar, solo manejamos fecha actual
                 return []
-            
-            # Esperar a que aparezcan los partidos
+            driver.get(self.base_url)
+            wait = WebDriverWait(driver, BBC_TIMEOUT)
             wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, ".sp-c-fixture")))
             html = driver.page_source
             soup = BeautifulSoup(html, 'html.parser')
-            
             games = []
-            # En BBC Sport, los partidos están en elementos con clase "sp-c-fixture"
             fixtures = soup.find_all('div', class_='sp-c-fixture')
             for fixture in fixtures:
                 try:
-                    # Extraer equipos (puede estar en spans con clase "sp-c-fixture__team-name")
                     home_span = fixture.find('span', class_='sp-c-fixture__team-name--home')
                     away_span = fixture.find('span', class_='sp-c-fixture__team-name--away')
                     if not home_span or not away_span:
                         continue
                     home_team = home_span.get_text(strip=True)
                     away_team = away_span.get_text(strip=True)
-                    
-                    # Verificar si el partido está finalizado (hay resultado)
                     score_span = fixture.find('span', class_='sp-c-fixture__score')
                     status = "scheduled"
                     home_score = None
@@ -767,7 +753,6 @@ class BBCSportProvider(BaseDataProvider):
                                 home_score = int(parts[0])
                                 away_score = int(parts[1])
                                 status = "finished"
-                    
                     game = {
                         "id": f"bbc_{home_team}_{away_team}_{target_date.isoformat()}",
                         "home_team": home_team,
@@ -782,7 +767,6 @@ class BBCSportProvider(BaseDataProvider):
                 except Exception as e:
                     print(f"Error procesando fixture BBC: {e}")
                     continue
-            
             if games:
                 self.mark_success()
             else:
@@ -793,9 +777,6 @@ class BBCSportProvider(BaseDataProvider):
             print(f"Error en BBCSportProvider: {e}")
             self.mark_failure()
             return []
-        finally:
-            # No cerramos el driver cada vez para reutilizarlo
-            pass
 
     def __del__(self):
         self._close_driver()
@@ -812,7 +793,7 @@ class DataProviderManager:
             TheSportsDBProvider(),
             OpenLigaDBProvider(),
             DraftKingsProvider(),
-            BBCSportProvider()     # nuevo proveedor
+            BBCSportProvider()
         ]
         self.last_successful_provider = None
         self.cache = {}
@@ -842,6 +823,34 @@ class DataProviderManager:
             else:
                 print(f"✗ {provider.name} no devolvió datos para esta fecha")
         print("⚠️ Ningún proveedor pudo obtener datos para la fecha solicitada")
+        return []
+
+    def get_soccer_games_by_date(self, target_date: date) -> List[Dict[str, Any]]:
+        """
+        Obtiene partidos de fútbol usando proveedores especializados.
+        Prioriza TheSportsDB, OpenLigaDB, BBC.
+        """
+        cache_key = f"soccer_games_{target_date.isoformat()}"
+        if cache_key in self.cache:
+            cached_data = self.cache[cache_key]
+            if datetime.now().timestamp() - cached_data["timestamp"] < 3600:
+                return cached_data["data"]
+
+        soccer_providers = [
+            TheSportsDBProvider(),
+            OpenLigaDBProvider(),
+            BBCSportProvider()
+        ]
+        for provider in soccer_providers:
+            print(f"Intentando obtener datos de fútbol desde {provider.name}...")
+            games = provider.get_games_by_date(target_date)
+            if games:
+                print(f"✓ Datos de fútbol obtenidos desde {provider.name} ({len(games)} juegos)")
+                self.cache[cache_key] = {"data": games, "timestamp": datetime.now().timestamp()}
+                return games
+            else:
+                print(f"✗ {provider.name} no devolvió datos de fútbol para esta fecha")
+        print("⚠️ Ningún proveedor de fútbol pudo obtener datos para la fecha solicitada")
         return []
 
     def get_team_recent_record(self, team_name: str, end_date: date, sport: str = "mlb") -> Dict[str, int]:

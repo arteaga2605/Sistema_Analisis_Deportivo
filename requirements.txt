@@ -4,3 +4,5 @@ selenium>=4.8.0
 webdriver-manager>=3.9.0
 sports-skills>=0.1.0   # Opcional, mejora cobertura
 matplotlib>=3.5.0
+colorama>=0.4.6
+vaderSentiment>=3.3.2

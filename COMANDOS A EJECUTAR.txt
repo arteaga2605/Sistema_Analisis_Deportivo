@@ -7,4 +7,6 @@ COMANDOS DISPONIBLES
    python main.py --help         - Muestra ayuda
    python main.py --list-tickets - Lista de Tickets
    python main.py --report       - Genera Reportes de Analistas
+   python main.py --soccer       - Analista Futbol
+   python main.py --analyze-tickets  - Analizar Tickets
    Remove-Item estado.json       - BORRA DATOS DE APUESTAS
