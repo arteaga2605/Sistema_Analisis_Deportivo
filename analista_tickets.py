@@ -12,12 +12,14 @@ from typing import List, Dict, Any, Optional, Tuple
 import requests
 import json
 import time
+import uuid
 
 from models import Estado, Prediccion
 from config import (
     UMBRAL_PROBABILIDAD, USE_MULTI_PROVIDER, 
     ENABLE_SOCIAL_SENTIMENT, XPOZ_TOKEN
 )
+from models.estado import EvaluacionTicket
 
 if USE_MULTI_PROVIDER:
     from data_providers import DataProviderManager
@@ -35,8 +37,8 @@ except ImportError:
 class RealSentimentAnalyzer:
     """
     Analiza sentimiento real de redes sociales usando Xpoz (datos) y VADER (análisis).
-    Xpoz proporciona acceso a millones de posts sin API key[citation:3].
-    VADER analiza el sentimiento optimizado para redes sociales[citation:5].
+    Xpoz proporciona acceso a millones de posts sin API key.
+    VADER analiza el sentimiento optimizado para redes sociales.
     """
     
     def __init__(self):
@@ -47,13 +49,13 @@ class RealSentimentAnalyzer:
     def _query_xpoz(self, query: str, limit: int = 50) -> List[str]:
         """
         Consulta Xpoz MCP para obtener posts reales sobre un tema.
-        Xpoz requiere token personal (gratuito) pero no API key[citation:3].
+        Xpoz requiere token personal (gratuito) pero no API key.
         """
         if not self.xpoz_token:
             return []
         
         try:
-            # Xpoz MCP endpoint (según documentación[citation:3])
+            # Xpoz MCP endpoint (según documentación)
             url = "https://mcp.xpoz.ai/query"
             headers = {"Authorization": f"Bearer {self.xpoz_token}"}
             payload = {
@@ -97,7 +99,7 @@ class RealSentimentAnalyzer:
         if not posts:
             return {'score': 0, 'confidence': 0, 'sample_size': 0, 'source': 'no_data'}
         
-        # Analizar cada post con VADER (optimizado para redes sociales)[citation:5]
+        # Analizar cada post con VADER (optimizado para redes sociales)
         compound_scores = []
         for post in posts:
             sentiment = self.vader.polarity_scores(post)
@@ -323,6 +325,16 @@ class TicketAnalyst:
             
             print(f"💡 RECOMENDACIÓN: {recomendacion}")
             print("="*80)
+            
+            # Guardar la evaluación en el estado
+            evaluacion = EvaluacionTicket(
+                fecha=date.today(),
+                ticket_id=ticket.id_ticket,
+                predicciones_ids=[pred.__dict__.get('id', f"pred_{i}") for i, pred in enumerate(ticket.predicciones)],
+                probabilidad_real=prob_real,
+                recomendacion=recomendacion
+            )
+            estado.agregar_evaluacion(evaluacion)
             
             resultados.append({
                 'ticket_id': ticket.id_ticket,

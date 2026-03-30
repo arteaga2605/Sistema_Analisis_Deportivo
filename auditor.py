@@ -2,6 +2,7 @@
 """
 Módulo para el Auditor de Resultados.
 Analiza predicciones vs resultados reales y genera informes de rendimiento.
+Ahora también incluye análisis de sugerencias de tickets y evaluaciones.
 """
 
 from datetime import date, timedelta
@@ -20,16 +21,27 @@ except ImportError:
 
 class AuditorResultados:
     """
-    Genera informes de rendimiento basados en el historial de predicciones.
+    Genera informes de rendimiento basados en el historial de predicciones,
+    sugerencias de tickets y evaluaciones.
     """
 
     def __init__(self, estado):
         self.estado = estado
         self.predicciones = estado.predicciones
+        self.sugerencias = estado.sugerencias
+        self.evaluaciones = estado.evaluaciones
 
     def obtener_predicciones_finalizadas(self) -> List:
         """Retorna solo predicciones con resultado real (acerto no None)."""
         return [p for p in self.predicciones if p.acerto is not None]
+
+    def obtener_sugerencias_con_resultado(self) -> List:
+        """Retorna sugerencias que se siguieron y tienen resultado."""
+        return [s for s in self.sugerencias if s.seguido and s.acerto is not None]
+
+    def obtener_evaluaciones_con_resultado(self) -> List:
+        """Retorna evaluaciones que tienen resultado real (acerto)."""
+        return [e for e in self.evaluaciones if e.acerto is not None]
 
     def calcular_estadisticas(self) -> Dict:
         """
@@ -40,6 +52,8 @@ class AuditorResultados:
         - by_sport: {deporte: {...}}
         - total_invested, total_profit, roi
         - profit_over_time: lista de (fecha, profit_acumulado)
+        - sugerencias: {total, seguidas, acertadas, accuracy}
+        - evaluaciones: {total, correctas, accuracy}
         """
         predicciones = self.obtener_predicciones_finalizadas()
         total = len(predicciones)
@@ -86,13 +100,29 @@ class AuditorResultados:
 
         # Evolución del beneficio acumulado
         profit_over_time = []
-        # Ordenar por fecha
         sorted_preds = sorted(predicciones, key=lambda p: p.fecha)
         acum = 0
         for p in sorted_preds:
             profit = p.monto_invertido if p.acerto else -p.monto_invertido
             acum += profit
             profit_over_time.append((p.fecha, acum))
+
+        # Estadísticas de sugerencias de tickets
+        sugerencias = self.obtener_sugerencias_con_resultado()
+        sugerencias_stats = {
+            'total': len(self.sugerencias),
+            'seguidas': len(sugerencias),
+            'acertadas': sum(1 for s in sugerencias if s.acerto),
+            'accuracy': (sum(1 for s in sugerencias if s.acerto) / len(sugerencias)) if sugerencias else 0
+        }
+
+        # Estadísticas de evaluaciones de tickets
+        evaluaciones = self.obtener_evaluaciones_con_resultado()
+        evaluaciones_stats = {
+            'total': len(self.evaluaciones),
+            'correctas': sum(1 for e in evaluaciones if e.acerto),
+            'accuracy': (sum(1 for e in evaluaciones if e.acerto) / len(evaluaciones)) if evaluaciones else 0
+        }
 
         return {
             'total_predictions': total,
@@ -104,7 +134,9 @@ class AuditorResultados:
             'total_invested': total_invested,
             'total_profit': total_profit,
             'roi': roi,
-            'profit_over_time': profit_over_time
+            'profit_over_time': profit_over_time,
+            'sugerencias': sugerencias_stats,
+            'evaluaciones': evaluaciones_stats
         }
 
     def generar_reporte_texto(self, stats: Dict) -> str:
@@ -113,7 +145,7 @@ class AuditorResultados:
         lines.append("\n" + "="*70)
         lines.append("📊 INFORME DE RENDIMIENTO - AUDITOR DE RESULTADOS")
         lines.append("="*70)
-        lines.append(f"\n📈 ESTADÍSTICAS GLOBALES:")
+        lines.append(f"\n📈 ESTADÍSTICAS GLOBALES DE PREDICCIONES:")
         lines.append(f"   Total predicciones finalizadas: {stats['total_predictions']}")
         lines.append(f"   Aciertos: {stats['correct']}")
         lines.append(f"   Fallos: {stats['incorrect']}")
@@ -134,6 +166,17 @@ class AuditorResultados:
         lines.append("-" * 55)
         for deporte, data in stats['by_sport'].items():
             lines.append(f"{deporte:<20} {data['predictions']:>12} {data['correct']:>10} {data['accuracy']*100:>11.2f}%")
+
+        lines.append("\n🎫 RENDIMIENTO DEL ASESOR DE APUESTAS (Sugerencias de Tickets):")
+        lines.append(f"   Total sugerencias generadas: {stats['sugerencias']['total']}")
+        lines.append(f"   Sugerencias seguidas: {stats['sugerencias']['seguidas']}")
+        lines.append(f"   Aciertos: {stats['sugerencias']['acertadas']}")
+        lines.append(f"   Precisión: {stats['sugerencias']['accuracy']*100:.2f}%")
+
+        lines.append("\n🔍 RENDIMIENTO DEL ANALISTA DE TICKETS (Evaluaciones):")
+        lines.append(f"   Total evaluaciones realizadas: {stats['evaluaciones']['total']}")
+        lines.append(f"   Evaluaciones correctas: {stats['evaluaciones']['correctas']}")
+        lines.append(f"   Precisión: {stats['evaluaciones']['accuracy']*100:.2f}%")
 
         lines.append("\n📅 EVOLUCIÓN DEL BENEFICIO ACUMULADO:")
         if stats['profit_over_time']:
@@ -175,7 +218,6 @@ class AuditorResultados:
             ax2.set_ylabel('Beneficio Acumulado')
             ax2.set_title('Evolución del Beneficio')
             ax2.grid(True)
-            # Formatear fechas
             ax2.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
             plt.setp(ax2.xaxis.get_majorticklabels(), rotation=45, ha='right')
         else:

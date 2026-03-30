@@ -1663,8 +1663,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 85.7%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Orlando Magic (139-87)",
+      "acerto": false,
       "monto_invertido": 0.1420634920634921
     },
     {
@@ -1677,8 +1677,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 74.5%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Philadelphia Flyers (2-1)",
+      "acerto": true,
       "monto_invertido": 0.1420634920634921
     },
     {
@@ -1691,8 +1691,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 70.0%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "New Jersey Devils (5-3)",
+      "acerto": true,
       "monto_invertido": 0.1420634920634921
     },
     {
@@ -2311,5 +2311,7 @@
       "estado": "pendiente",
       "ganancia_neta": null
     }
-  ]
+  ],
+  "sugerencias": [],
+  "evaluaciones": []
 }

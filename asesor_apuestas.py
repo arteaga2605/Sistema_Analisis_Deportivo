@@ -6,8 +6,9 @@ y sugiere automáticamente el ticket de 3 juegos más probable del día.
 """
 
 from datetime import date
-from typing import List, Dict, Any, Tuple, Optional
+from typing import List, Dict, Any, Optional
 from models import Estado
+
 
 class AsesorApuestas:
     """
