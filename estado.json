@@ -1,5 +1,5 @@
 {
-  "capital": 10.023809523809524,
+  "capital": 8.523809523809524,
   "predicciones": [
     {
       "fecha": "2026-03-26",
@@ -305,8 +305,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 99.0%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Denver Nuggets (135-129)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -319,8 +319,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 81.1%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Cleveland Cavaliers (149-128)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -333,8 +333,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 75.0%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Toronto Raptors (119-106)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -347,8 +347,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 72.4%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Portland Trail Blazers (93-100)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -361,8 +361,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 71.9%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Los Angeles Angels (2-6)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -375,8 +375,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 67.7%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "New York Yankees (0-3)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -389,8 +389,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 66.7%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Atlanta Braves (6-0)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -403,8 +403,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 66.7%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "New York Rangers (6-1)",
+      "acerto": false,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -417,8 +417,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 66.7%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Oklahoma City Thunder (131-113)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -431,8 +431,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 95.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Denver Nuggets 57.1% vs Utah Jazz 0.0%\n• Récord últimos 5 días: Denver Nuggets 100.0% vs Utah Jazz 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Denver Nuggets 131.7 a favor / 123.3 en contra | Utah Jazz 118.5 a favor / 138.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Denver Nuggets (135-129)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -445,8 +445,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 88.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Portland Trail Blazers 37.5% vs Dallas Mavericks 14.3%\n• Récord últimos 5 días: Portland Trail Blazers 66.7% vs Dallas Mavericks 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Portland Trail Blazers 125.3 a favor / 108.7 en contra | Dallas Mavericks 133.0 a favor / 139.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Portland Trail Blazers (93-100)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -459,8 +459,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 85.6% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Atlanta Braves 72.7% vs Kansas City Royals 36.4%\n• Récord últimos 5 días: Atlanta Braves 66.7% vs Kansas City Royals 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Atlanta Braves 3.7 a favor / 3.7 en contra | Kansas City Royals 1.5 a favor / 3.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Atlanta Braves (6-0)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -473,8 +473,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 81.8% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Golden State Warriors 50.0% vs Washington Wizards 28.6%\n• Récord últimos 5 días: Golden State Warriors 100.0% vs Washington Wizards 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Golden State Warriors 123.0 a favor / 118.5 en contra | Washington Wizards 123.0 a favor / 127.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Golden State Warriors (131-126)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -487,8 +487,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 81.4% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Toronto Raptors 85.7% vs New Orleans Pelicans 28.6%\n• Récord últimos 5 días: Toronto Raptors 33.3% vs New Orleans Pelicans 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Toronto Raptors 111.7 a favor / 122.0 en contra | New Orleans Pelicans 112.0 a favor / 125.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Toronto Raptors (119-106)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -501,8 +501,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 80.4% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Los Angeles Lakers 71.4% vs Brooklyn Nets 57.1%\n• Récord últimos 5 días: Los Angeles Lakers 50.0% vs Brooklyn Nets 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Los Angeles Lakers 123.5 a favor / 121.5 en contra | Brooklyn Nets 109.0 a favor / 123.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Brooklyn Nets (116-99)",
+      "acerto": false,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -515,8 +515,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 77.2% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: San Francisco Giants 27.3% vs New York Yankees 57.1%\n• Récord últimos 5 días: San Francisco Giants 0.0% vs New York Yankees 75.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: San Francisco Giants 0.0 a favor / 7.0 en contra | New York Yankees 6.8 a favor / 5.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "New York Yankees (0-3)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -529,8 +529,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 74.5% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Toronto Blue Jays 55.6% vs Athletics 45.5%\n• Récord últimos 5 días: Toronto Blue Jays 100.0% vs Athletics 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Toronto Blue Jays 14.0 a favor / 1.0 en contra | Athletics 7.5 a favor / 7.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Toronto Blue Jays (3-2)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -543,8 +543,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 71.9% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Houston Astros 30.0% vs Los Angeles Angels 76.9%\n• Récord últimos 5 días: Houston Astros 0.0% vs Los Angeles Angels 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Houston Astros 1.0 a favor / 3.0 en contra | Los Angeles Angels 4.5 a favor / 5.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Los Angeles Angels (2-6)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -557,8 +557,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 70.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Seattle Mariners 50.0% vs Cleveland Guardians 58.3%\n• Récord últimos 5 días: Seattle Mariners 33.3% vs Cleveland Guardians 100.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Seattle Mariners 3.7 a favor / 6.0 en contra | Cleveland Guardians 7.8 a favor / 2.8 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Seattle Mariners (5-1)",
+      "acerto": false,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -571,8 +571,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 69.3% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Indiana Pacers 28.6% vs LA Clippers 37.5%\n• Récord últimos 5 días: Indiana Pacers 50.0% vs LA Clippers 100.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Indiana Pacers 129.0 a favor / 131.5 en contra | LA Clippers 124.0 a favor / 95.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "LA Clippers (113-114)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -585,8 +585,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 68.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Boston Celtics 83.3% vs Atlanta Hawks 85.7%\n• Récord últimos 5 días: Boston Celtics 50.0% vs Atlanta Hawks 100.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Boston Celtics 105.5 a favor / 105.5 en contra | Atlanta Hawks 138.0 a favor / 118.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Boston Celtics (109-102)",
+      "acerto": false,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -599,8 +599,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 66.7% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Oklahoma City Thunder 66.7% vs Chicago Bulls 33.3%\n• Récord últimos 5 días: Oklahoma City Thunder 50.0% vs Chicago Bulls 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Oklahoma City Thunder 116.0 a favor / 111.0 en contra | Chicago Bulls 134.5 a favor / 140.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Oklahoma City Thunder (131-113)",
+      "acerto": true,
       "monto_invertido": 0.022727272727272728
     },
     {
@@ -613,8 +613,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 99.0%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Denver Nuggets (135-129)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -627,8 +627,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 78.1%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Cleveland Cavaliers (149-128)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -641,8 +641,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 75.0%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Oklahoma City Thunder (131-113)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -655,8 +655,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 74.5%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Toronto Raptors (119-106)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -669,8 +669,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 72.0%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "LA Clippers (113-114)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -683,8 +683,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 72.0%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Portland Trail Blazers (93-100)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -697,8 +697,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 71.9%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Los Angeles Angels (2-6)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -711,8 +711,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 67.7%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "New York Yankees (0-3)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -725,8 +725,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 66.7%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Atlanta Braves (6-0)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -739,8 +739,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 66.7%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "New York Rangers (6-1)",
+      "acerto": false,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -753,8 +753,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 95.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Denver Nuggets 57.1% vs Utah Jazz 0.0%\n• Récord últimos 5 días: Denver Nuggets 100.0% vs Utah Jazz 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Denver Nuggets 131.7 a favor / 123.3 en contra | Utah Jazz 118.5 a favor / 138.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Denver Nuggets (135-129)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -767,8 +767,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 88.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Portland Trail Blazers 37.5% vs Dallas Mavericks 14.3%\n• Récord últimos 5 días: Portland Trail Blazers 66.7% vs Dallas Mavericks 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Portland Trail Blazers 125.3 a favor / 108.7 en contra | Dallas Mavericks 133.0 a favor / 139.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Portland Trail Blazers (93-100)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -781,8 +781,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 85.6% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Atlanta Braves 72.7% vs Kansas City Royals 36.4%\n• Récord últimos 5 días: Atlanta Braves 66.7% vs Kansas City Royals 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Atlanta Braves 3.7 a favor / 3.7 en contra | Kansas City Royals 1.5 a favor / 3.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Atlanta Braves (6-0)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -795,8 +795,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 81.8% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Golden State Warriors 50.0% vs Washington Wizards 28.6%\n• Récord últimos 5 días: Golden State Warriors 100.0% vs Washington Wizards 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Golden State Warriors 123.0 a favor / 118.5 en contra | Washington Wizards 123.0 a favor / 127.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Golden State Warriors (131-126)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -809,8 +809,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 81.4% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Toronto Raptors 85.7% vs New Orleans Pelicans 28.6%\n• Récord últimos 5 días: Toronto Raptors 33.3% vs New Orleans Pelicans 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Toronto Raptors 111.7 a favor / 122.0 en contra | New Orleans Pelicans 112.0 a favor / 125.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Toronto Raptors (119-106)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -823,8 +823,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 80.4% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Los Angeles Lakers 71.4% vs Brooklyn Nets 57.1%\n• Récord últimos 5 días: Los Angeles Lakers 50.0% vs Brooklyn Nets 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Los Angeles Lakers 123.5 a favor / 121.5 en contra | Brooklyn Nets 109.0 a favor / 123.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Brooklyn Nets (116-99)",
+      "acerto": false,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -837,8 +837,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 77.2% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: San Francisco Giants 27.3% vs New York Yankees 57.1%\n• Récord últimos 5 días: San Francisco Giants 0.0% vs New York Yankees 75.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: San Francisco Giants 0.0 a favor / 7.0 en contra | New York Yankees 6.8 a favor / 5.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "New York Yankees (0-3)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -851,8 +851,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 74.5% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Toronto Blue Jays 55.6% vs Athletics 45.5%\n• Récord últimos 5 días: Toronto Blue Jays 100.0% vs Athletics 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Toronto Blue Jays 14.0 a favor / 1.0 en contra | Athletics 7.5 a favor / 7.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Toronto Blue Jays (3-2)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -865,8 +865,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 71.9% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Houston Astros 30.0% vs Los Angeles Angels 76.9%\n• Récord últimos 5 días: Houston Astros 0.0% vs Los Angeles Angels 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Houston Astros 1.0 a favor / 3.0 en contra | Los Angeles Angels 4.5 a favor / 5.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Los Angeles Angels (2-6)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -879,8 +879,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 70.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Seattle Mariners 50.0% vs Cleveland Guardians 58.3%\n• Récord últimos 5 días: Seattle Mariners 33.3% vs Cleveland Guardians 100.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Seattle Mariners 3.7 a favor / 6.0 en contra | Cleveland Guardians 7.8 a favor / 2.8 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Seattle Mariners (5-1)",
+      "acerto": false,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -893,8 +893,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 69.3% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Indiana Pacers 28.6% vs LA Clippers 37.5%\n• Récord últimos 5 días: Indiana Pacers 50.0% vs LA Clippers 100.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Indiana Pacers 129.0 a favor / 131.5 en contra | LA Clippers 124.0 a favor / 95.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "LA Clippers (113-114)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -907,8 +907,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 68.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Boston Celtics 83.3% vs Atlanta Hawks 85.7%\n• Récord últimos 5 días: Boston Celtics 50.0% vs Atlanta Hawks 100.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Boston Celtics 105.5 a favor / 105.5 en contra | Atlanta Hawks 138.0 a favor / 118.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Boston Celtics (109-102)",
+      "acerto": false,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -921,8 +921,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 66.7% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Oklahoma City Thunder 66.7% vs Chicago Bulls 33.3%\n• Récord últimos 5 días: Oklahoma City Thunder 50.0% vs Chicago Bulls 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Oklahoma City Thunder 116.0 a favor / 111.0 en contra | Chicago Bulls 134.5 a favor / 140.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Oklahoma City Thunder (131-113)",
+      "acerto": true,
       "monto_invertido": 0.02179089026915114
     },
     {
@@ -935,8 +935,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 99.0%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Denver Nuggets (135-129)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -949,8 +949,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 81.1%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Cleveland Cavaliers (149-128)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -963,8 +963,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 75.0%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Toronto Raptors (119-106)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -977,8 +977,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 72.4%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Portland Trail Blazers (93-100)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -991,8 +991,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 71.9%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Los Angeles Angels (2-6)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1005,8 +1005,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 67.7%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "New York Yankees (0-3)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1019,8 +1019,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 66.7%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Atlanta Braves (6-0)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1033,8 +1033,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 66.7%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "New York Rangers (6-1)",
+      "acerto": false,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1047,8 +1047,8 @@
       "marcador_estimado": null,
       "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 66.7%.",
       "analista": "Analista Principal",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Oklahoma City Thunder (131-113)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1061,8 +1061,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 95.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Denver Nuggets 57.1% vs Utah Jazz 0.0%\n• Récord últimos 5 días: Denver Nuggets 100.0% vs Utah Jazz 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Denver Nuggets 131.7 a favor / 123.3 en contra | Utah Jazz 118.5 a favor / 138.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Denver Nuggets (135-129)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1075,8 +1075,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 88.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Portland Trail Blazers 37.5% vs Dallas Mavericks 14.3%\n• Récord últimos 5 días: Portland Trail Blazers 66.7% vs Dallas Mavericks 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Portland Trail Blazers 125.3 a favor / 108.7 en contra | Dallas Mavericks 133.0 a favor / 139.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Portland Trail Blazers (93-100)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1089,8 +1089,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 85.6% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Atlanta Braves 72.7% vs Kansas City Royals 36.4%\n• Récord últimos 5 días: Atlanta Braves 66.7% vs Kansas City Royals 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Atlanta Braves 3.7 a favor / 3.7 en contra | Kansas City Royals 1.5 a favor / 3.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Atlanta Braves (6-0)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1103,8 +1103,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 81.8% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Golden State Warriors 50.0% vs Washington Wizards 28.6%\n• Récord últimos 5 días: Golden State Warriors 100.0% vs Washington Wizards 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Golden State Warriors 123.0 a favor / 118.5 en contra | Washington Wizards 123.0 a favor / 127.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Golden State Warriors (131-126)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1117,8 +1117,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 81.4% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Toronto Raptors 85.7% vs New Orleans Pelicans 28.6%\n• Récord últimos 5 días: Toronto Raptors 33.3% vs New Orleans Pelicans 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Toronto Raptors 111.7 a favor / 122.0 en contra | New Orleans Pelicans 112.0 a favor / 125.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Toronto Raptors (119-106)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1131,8 +1131,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 80.4% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Los Angeles Lakers 71.4% vs Brooklyn Nets 57.1%\n• Récord últimos 5 días: Los Angeles Lakers 50.0% vs Brooklyn Nets 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Los Angeles Lakers 123.5 a favor / 121.5 en contra | Brooklyn Nets 109.0 a favor / 123.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Brooklyn Nets (116-99)",
+      "acerto": false,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1145,8 +1145,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 77.2% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: San Francisco Giants 27.3% vs New York Yankees 57.1%\n• Récord últimos 5 días: San Francisco Giants 0.0% vs New York Yankees 75.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: San Francisco Giants 0.0 a favor / 7.0 en contra | New York Yankees 6.8 a favor / 5.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "New York Yankees (0-3)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1159,8 +1159,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 74.5% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Toronto Blue Jays 55.6% vs Athletics 45.5%\n• Récord últimos 5 días: Toronto Blue Jays 100.0% vs Athletics 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Toronto Blue Jays 14.0 a favor / 1.0 en contra | Athletics 7.5 a favor / 7.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Toronto Blue Jays (3-2)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1173,8 +1173,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 71.9% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Houston Astros 30.0% vs Los Angeles Angels 76.9%\n• Récord últimos 5 días: Houston Astros 0.0% vs Los Angeles Angels 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Houston Astros 1.0 a favor / 3.0 en contra | Los Angeles Angels 4.5 a favor / 5.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Los Angeles Angels (2-6)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1187,8 +1187,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 70.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Seattle Mariners 50.0% vs Cleveland Guardians 58.3%\n• Récord últimos 5 días: Seattle Mariners 33.3% vs Cleveland Guardians 100.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Seattle Mariners 3.7 a favor / 6.0 en contra | Cleveland Guardians 7.8 a favor / 2.8 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Seattle Mariners (5-1)",
+      "acerto": false,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1201,8 +1201,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 69.3% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Indiana Pacers 28.6% vs LA Clippers 37.5%\n• Récord últimos 5 días: Indiana Pacers 50.0% vs LA Clippers 100.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Indiana Pacers 129.0 a favor / 131.5 en contra | LA Clippers 124.0 a favor / 95.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "LA Clippers (113-114)",
+      "acerto": true,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1215,8 +1215,8 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 68.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Boston Celtics 83.3% vs Atlanta Hawks 85.7%\n• Récord últimos 5 días: Boston Celtics 50.0% vs Atlanta Hawks 100.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Boston Celtics 105.5 a favor / 105.5 en contra | Atlanta Hawks 138.0 a favor / 118.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
       "analista": "Analista Avanzado",
-      "resultado_real": null,
-      "acerto": null,
+      "resultado_real": "Boston Celtics (109-102)",
+      "acerto": false,
       "monto_invertido": 0.02278138528138528
     },
     {
@@ -1229,9 +1229,471 @@
       "marcador_estimado": null,
       "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 66.7% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Oklahoma City Thunder 66.7% vs Chicago Bulls 33.3%\n• Récord últimos 5 días: Oklahoma City Thunder 50.0% vs Chicago Bulls 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Oklahoma City Thunder 116.0 a favor / 111.0 en contra | Chicago Bulls 134.5 a favor / 140.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
       "analista": "Analista Avanzado",
+      "resultado_real": "Oklahoma City Thunder (131-113)",
+      "acerto": true,
+      "monto_invertido": 0.02278138528138528
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Columbus Blue Jackets",
+      "equipo_visitante": "San Jose Sharks",
+      "ganador_predicho": "Columbus Blue Jackets",
+      "probabilidad": 0.8333333333333333,
+      "deporte": "🏒 NHL",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 83.3%.",
+      "analista": "Analista Principal",
+      "resultado_real": "San Jose Sharks (2-3)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Calgary Flames",
+      "equipo_visitante": "Vancouver Canucks",
+      "ganador_predicho": "Calgary Flames",
+      "probabilidad": 0.7741935483870968,
+      "deporte": "🏒 NHL",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 77.4%.",
+      "analista": "Analista Principal",
+      "resultado_real": "Calgary Flames (7-3)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Chicago Cubs",
+      "equipo_visitante": "Washington Nationals",
+      "ganador_predicho": "Chicago Cubs",
+      "probabilidad": 0.7623762376237624,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 76.2%.",
+      "analista": "Analista Principal",
+      "resultado_real": "Washington Nationals (10-2)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Atlanta Braves",
+      "equipo_visitante": "Kansas City Royals",
+      "ganador_predicho": "Atlanta Braves",
+      "probabilidad": 0.7272727272727273,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 72.7%.",
+      "analista": "Analista Principal",
+      "resultado_real": "Atlanta Braves (6-2)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Houston Astros",
+      "equipo_visitante": "Los Angeles Angels",
+      "ganador_predicho": "Los Angeles Angels",
+      "probabilidad": 0.7194244604316546,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 71.9%.",
+      "analista": "Analista Principal",
+      "resultado_real": "Los Angeles Angels (11-9)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Milwaukee Brewers",
+      "equipo_visitante": "Chicago White Sox",
+      "ganador_predicho": "Chicago White Sox",
+      "probabilidad": 0.6857142857142857,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 68.6%.",
+      "analista": "Analista Principal",
+      "resultado_real": "Milwaukee Brewers (6-1)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "San Francisco Giants",
+      "equipo_visitante": "New York Yankees",
+      "ganador_predicho": "New York Yankees",
+      "probabilidad": 0.6818181818181819,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 68.2%.",
+      "analista": "Analista Principal",
+      "resultado_real": "New York Yankees (1-3)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Cincinnati Reds",
+      "equipo_visitante": "Boston Red Sox",
+      "ganador_predicho": "Boston Red Sox",
+      "probabilidad": 0.6666666666666667,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 66.7%.",
+      "analista": "Analista Principal",
+      "resultado_real": "Cincinnati Reds (6-5)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Pittsburgh Penguins",
+      "equipo_visitante": "Dallas Stars",
+      "ganador_predicho": "Pittsburgh Penguins",
+      "probabilidad": 0.6666666666666666,
+      "deporte": "🏒 NHL",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 66.7%.",
+      "analista": "Analista Principal",
+      "resultado_real": "Dallas Stars (3-6)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "San Diego Padres",
+      "equipo_visitante": "Detroit Tigers",
+      "ganador_predicho": "Detroit Tigers",
+      "probabilidad": 0.6632653061224489,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 66.3%.",
+      "analista": "Analista Principal",
+      "resultado_real": "San Diego Padres (3-0)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Atlanta Braves",
+      "equipo_visitante": "Kansas City Royals",
+      "ganador_predicho": "Atlanta Braves",
+      "probabilidad": 0.95,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 95.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Atlanta Braves 72.7% vs Kansas City Royals 27.3%\n• Récord últimos 5 días: Atlanta Braves 100.0% vs Kansas City Royals 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Atlanta Braves 4.7 a favor / 1.3 en contra | Kansas City Royals 1.0 a favor / 4.3 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Atlanta Braves (6-2)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Columbus Blue Jackets",
+      "equipo_visitante": "San Jose Sharks",
+      "ganador_predicho": "Columbus Blue Jackets",
+      "probabilidad": 0.8892857142857145,
+      "deporte": "🏒 NHL",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 88.9% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Columbus Blue Jackets 71.4% vs San Jose Sharks 14.3%\n• Récord últimos 5 días: Columbus Blue Jackets 50.0% vs San Jose Sharks 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Columbus Blue Jackets 2.0 a favor / 2.0 en contra | San Jose Sharks 2.0 a favor / 4.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "San Jose Sharks (2-3)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Carolina Hurricanes",
+      "equipo_visitante": "New Jersey Devils",
+      "ganador_predicho": "New Jersey Devils",
+      "probabilidad": 0.8833333333333333,
+      "deporte": "🏒 NHL",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 88.3% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Carolina Hurricanes 66.7% vs New Jersey Devils 83.3%\n• Récord últimos 5 días: Carolina Hurricanes 0.0% vs New Jersey Devils 100.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Carolina Hurricanes 2.0 a favor / 5.0 en contra | New Jersey Devils 5.0 a favor / 3.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Carolina Hurricanes (5-2)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "New York Mets",
+      "equipo_visitante": "Pittsburgh Pirates",
+      "ganador_predicho": "New York Mets",
+      "probabilidad": 0.8690909090909091,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 86.9% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: New York Mets 30.0% vs Pittsburgh Pirates 45.5%\n• Récord últimos 5 días: New York Mets 100.0% vs Pittsburgh Pirates 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: New York Mets 11.0 a favor / 7.0 en contra | Pittsburgh Pirates 4.5 a favor / 8.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "New York Mets (4-2)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Atlanta Hawks",
+      "equipo_visitante": "Sacramento Kings",
+      "ganador_predicho": "Atlanta Hawks",
+      "probabilidad": 0.8690476190476191,
+      "deporte": "🏀 NBA",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 86.9% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Atlanta Hawks 75.0% vs Sacramento Kings 57.1%\n• Récord últimos 5 días: Atlanta Hawks 66.7% vs Sacramento Kings 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Atlanta Hawks 126.0 a favor / 115.0 en contra | Sacramento Kings 103.5 a favor / 127.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Atlanta Hawks (123-113)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Calgary Flames",
+      "equipo_visitante": "Vancouver Canucks",
+      "ganador_predicho": "Calgary Flames",
+      "probabilidad": 0.855952380952381,
+      "deporte": "🏒 NHL",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 85.6% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Calgary Flames 57.1% vs Vancouver Canucks 16.7%\n• Récord últimos 5 días: Calgary Flames 50.0% vs Vancouver Canucks 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Calgary Flames 2.5 a favor / 2.5 en contra | Vancouver Canucks 1.5 a favor / 4.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Calgary Flames (7-3)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Milwaukee Bucks",
+      "equipo_visitante": "San Antonio Spurs",
+      "ganador_predicho": "San Antonio Spurs",
+      "probabilidad": 0.85,
+      "deporte": "🏀 NBA",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 85.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Milwaukee Bucks 85.7% vs San Antonio Spurs 85.7%\n• Récord últimos 5 días: Milwaukee Bucks 0.0% vs San Antonio Spurs 100.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Milwaukee Bucks 97.5 a favor / 129.5 en contra | San Antonio Spurs 129.5 a favor / 104.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Milwaukee Bucks (95-127)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "St. Louis Cardinals",
+      "equipo_visitante": "Tampa Bay Rays",
+      "ganador_predicho": "St. Louis Cardinals",
+      "probabilidad": 0.8297979797979798,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 83.0% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: St. Louis Cardinals 77.8% vs Tampa Bay Rays 54.5%\n• Récord últimos 5 días: St. Louis Cardinals 100.0% vs Tampa Bay Rays 33.3% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: St. Louis Cardinals 9.0 a favor / 7.0 en contra | Tampa Bay Rays 5.3 a favor / 4.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "St. Louis Cardinals (6-5)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Milwaukee Brewers",
+      "equipo_visitante": "Chicago White Sox",
+      "ganador_predicho": "Milwaukee Brewers",
+      "probabilidad": 0.8212121212121213,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 82.1% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Milwaukee Brewers 33.3% vs Chicago White Sox 72.7%\n• Récord últimos 5 días: Milwaukee Brewers 100.0% vs Chicago White Sox 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Milwaukee Brewers 9.0 a favor / 1.3 en contra | Chicago White Sox 5.5 a favor / 12.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Milwaukee Brewers (6-1)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Houston Astros",
+      "equipo_visitante": "Los Angeles Angels",
+      "ganador_predicho": "Los Angeles Angels",
+      "probabilidad": 0.8063461538461538,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 80.6% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Houston Astros 30.0% vs Los Angeles Angels 76.9%\n• Récord últimos 5 días: Houston Astros 0.0% vs Los Angeles Angels 75.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Houston Astros 1.0 a favor / 4.5 en contra | Los Angeles Angels 4.8 a favor / 2.2 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Los Angeles Angels (11-9)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Colorado Avalanche",
+      "equipo_visitante": "Winnipeg Jets",
+      "ganador_predicho": "Colorado Avalanche",
+      "probabilidad": 0.7892857142857144,
+      "deporte": "🏒 NHL",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 78.9% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Colorado Avalanche 57.1% vs Winnipeg Jets 50.0%\n• Récord últimos 5 días: Colorado Avalanche 100.0% vs Winnipeg Jets 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Colorado Avalanche 4.5 a favor / 2.0 en contra | Winnipeg Jets 3.0 a favor / 2.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Winnipeg Jets (2-4)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Pittsburgh Penguins",
+      "equipo_visitante": "Dallas Stars",
+      "ganador_predicho": "Pittsburgh Penguins",
+      "probabilidad": 0.7821428571428573,
+      "deporte": "🏒 NHL",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 78.2% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Pittsburgh Penguins 57.1% vs Dallas Stars 28.6%\n• Récord últimos 5 días: Pittsburgh Penguins 50.0% vs Dallas Stars 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Pittsburgh Penguins 3.0 a favor / 4.5 en contra | Dallas Stars 2.5 a favor / 4.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Dallas Stars (3-6)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "San Francisco Giants",
+      "equipo_visitante": "New York Yankees",
+      "ganador_predicho": "New York Yankees",
+      "probabilidad": 0.7810714285714286,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 78.1% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: San Francisco Giants 30.0% vs New York Yankees 64.3%\n• Récord últimos 5 días: San Francisco Giants 0.0% vs New York Yankees 75.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: San Francisco Giants 0.0 a favor / 5.0 en contra | New York Yankees 6.0 a favor / 4.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "New York Yankees (1-3)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Charlotte Hornets",
+      "equipo_visitante": "Philadelphia 76ers",
+      "ganador_predicho": "Charlotte Hornets",
+      "probabilidad": 0.7654761904761905,
+      "deporte": "🏀 NBA",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 76.5% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Charlotte Hornets 66.7% vs Philadelphia 76ers 71.4%\n• Récord últimos 5 días: Charlotte Hornets 100.0% vs Philadelphia 76ers 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Charlotte Hornets 124.0 a favor / 96.5 en contra | Philadelphia 76ers 130.0 a favor / 130.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Philadelphia 76ers (114-118)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Miami Marlins",
+      "equipo_visitante": "Colorado Rockies",
+      "ganador_predicho": "Miami Marlins",
+      "probabilidad": 0.7575757575757576,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 75.8% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Miami Marlins 45.5% vs Colorado Rockies 58.3%\n• Récord últimos 5 días: Miami Marlins 100.0% vs Colorado Rockies 33.3% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Miami Marlins 2.0 a favor / 1.0 en contra | Colorado Rockies 5.0 a favor / 6.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Miami Marlins (4-3)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Toronto Blue Jays",
+      "equipo_visitante": "Athletics",
+      "ganador_predicho": "Toronto Blue Jays",
+      "probabilidad": 0.7561111111111112,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 75.6% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Toronto Blue Jays 55.6% vs Athletics 40.0%\n• Récord últimos 5 días: Toronto Blue Jays 100.0% vs Athletics 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Toronto Blue Jays 3.0 a favor / 2.0 en contra | Athletics 6.0 a favor / 6.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Toronto Blue Jays (8-7)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Los Angeles Kings",
+      "equipo_visitante": "Utah Mammoth",
+      "ganador_predicho": "Los Angeles Kings",
+      "probabilidad": 0.7464285714285714,
+      "deporte": "🏒 NHL",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 74.6% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Los Angeles Kings 28.6% vs Utah Mammoth 42.9%\n• Récord últimos 5 días: Los Angeles Kings 50.0% vs Utah Mammoth 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Los Angeles Kings 3.0 a favor / 1.5 en contra | Utah Mammoth 3.0 a favor / 6.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Utah Mammoth (2-6)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Los Angeles Dodgers",
+      "equipo_visitante": "Arizona Diamondbacks",
+      "ganador_predicho": "Los Angeles Dodgers",
+      "probabilidad": 0.733974358974359,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 73.4% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Los Angeles Dodgers 46.2% vs Arizona Diamondbacks 41.7%\n• Récord últimos 5 días: Los Angeles Dodgers 50.0% vs Arizona Diamondbacks 0.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Los Angeles Dodgers 5.0 a favor / 4.0 en contra | Arizona Diamondbacks 2.8 a favor / 7.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Los Angeles Dodgers (3-2)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Vegas Golden Knights",
+      "equipo_visitante": "Washington Capitals",
+      "ganador_predicho": "Washington Capitals",
+      "probabilidad": 0.7178571428571429,
+      "deporte": "🏒 NHL",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 71.8% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Vegas Golden Knights 28.6% vs Washington Capitals 50.0%\n• Récord últimos 5 días: Vegas Golden Knights 0.0% vs Washington Capitals 50.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Vegas Golden Knights 2.0 a favor / 4.0 en contra | Washington Capitals 3.5 a favor / 3.5 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Washington Capitals (4-5)",
+      "acerto": true,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-28",
+      "equipo_local": "Baltimore Orioles",
+      "equipo_visitante": "Minnesota Twins",
+      "ganador_predicho": "Baltimore Orioles",
+      "probabilidad": 0.7121212121212122,
+      "deporte": "⚾ MLB",
+      "marcador_estimado": null,
+      "comentario": "🏆 PREDICCIÓN (Modelo avanzado): LOCAL gana con 71.2% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Baltimore Orioles 50.0% vs Minnesota Twins 27.3%\n• Récord últimos 5 días: Baltimore Orioles 100.0% vs Minnesota Twins 66.7% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Baltimore Orioles 2.0 a favor / 0.5 en contra | Minnesota Twins 8.3 a favor / 4.7 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n✅ Factor decisivo: Mejor forma reciente y rendimiento ofensivo.",
+      "analista": "Analista Avanzado",
+      "resultado_real": "Minnesota Twins (1-4)",
+      "acerto": false,
+      "monto_invertido": 0.01503968253968254
+    },
+    {
+      "fecha": "2026-03-29",
+      "equipo_local": "Toronto Raptors",
+      "equipo_visitante": "Orlando Magic",
+      "ganador_predicho": "Toronto Raptors",
+      "probabilidad": 0.8571428571428571,
+      "deporte": "🏀 NBA",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 85.7%.",
+      "analista": "Analista Principal",
       "resultado_real": null,
       "acerto": null,
-      "monto_invertido": 0.02278138528138528
+      "monto_invertido": 0.1420634920634921
+    },
+    {
+      "fecha": "2026-03-29",
+      "equipo_local": "Philadelphia Flyers",
+      "equipo_visitante": "Dallas Stars",
+      "ganador_predicho": "Philadelphia Flyers",
+      "probabilidad": 0.7446808510638298,
+      "deporte": "🏒 NHL",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 74.5%.",
+      "analista": "Analista Principal",
+      "resultado_real": null,
+      "acerto": null,
+      "monto_invertido": 0.1420634920634921
+    },
+    {
+      "fecha": "2026-03-29",
+      "equipo_local": "New Jersey Devils",
+      "equipo_visitante": "Chicago Blackhawks",
+      "ganador_predicho": "New Jersey Devils",
+      "probabilidad": 0.7,
+      "deporte": "🏒 NHL",
+      "marcador_estimado": null,
+      "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 70.0%.",
+      "analista": "Analista Principal",
+      "resultado_real": null,
+      "acerto": null,
+      "monto_invertido": 0.1420634920634921
     }
   ],
   "tickets": [
@@ -1312,8 +1774,8 @@
       ],
       "monto_total": 0.5,
       "odds": 2.0,
-      "estado": "pendiente",
-      "ganancia_neta": 0.0
+      "estado": "perdido",
+      "ganancia_neta": -0.5
     },
     {
       "id_ticket": "TICKET_20260327112240",
@@ -1350,8 +1812,74 @@
       ],
       "monto_total": 0.5,
       "odds": 2.0,
-      "estado": "pendiente",
-      "ganancia_neta": null
+      "estado": "perdido",
+      "ganancia_neta": -0.5
+    },
+    {
+      "id_ticket": "TICKET_20260328103711",
+      "fecha_creacion": "2026-03-28",
+      "predicciones": [
+        {
+          "fecha": "2026-03-28",
+          "equipo_local": "Columbus Blue Jackets",
+          "equipo_visitante": "San Jose Sharks",
+          "ganador_predicho": "Columbus Blue Jackets",
+          "probabilidad": 0.8333333333333333,
+          "deporte": "🏒 NHL",
+          "marcador_estimado": null,
+          "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 83.3%.",
+          "analista": "Analista Principal",
+          "resultado_real": null,
+          "acerto": null,
+          "monto_invertido": 0.01503968253968254
+        },
+        {
+          "fecha": "2026-03-28",
+          "equipo_local": "Chicago Cubs",
+          "equipo_visitante": "Washington Nationals",
+          "ganador_predicho": "Chicago Cubs",
+          "probabilidad": 0.7623762376237624,
+          "deporte": "⚾ MLB",
+          "marcador_estimado": null,
+          "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 76.2%.",
+          "analista": "Analista Principal",
+          "resultado_real": null,
+          "acerto": null,
+          "monto_invertido": 0.01503968253968254
+        },
+        {
+          "fecha": "2026-03-28",
+          "equipo_local": "Atlanta Braves",
+          "equipo_visitante": "Kansas City Royals",
+          "ganador_predicho": "Atlanta Braves",
+          "probabilidad": 0.7272727272727273,
+          "deporte": "⚾ MLB",
+          "marcador_estimado": null,
+          "comentario": "Basado en récord reciente de victorias/derrotas. Probabilidad 72.7%.",
+          "analista": "Analista Principal",
+          "resultado_real": null,
+          "acerto": null,
+          "monto_invertido": 0.01503968253968254
+        },
+        {
+          "fecha": "2026-03-28",
+          "equipo_local": "Carolina Hurricanes",
+          "equipo_visitante": "New Jersey Devils",
+          "ganador_predicho": "New Jersey Devils",
+          "probabilidad": 0.8833333333333333,
+          "deporte": "🏒 NHL",
+          "marcador_estimado": null,
+          "comentario": "🏆 PREDICCIÓN (Modelo avanzado): VISITANTE gana con 88.3% de probabilidad.\n\n🔍 Factores considerados:\n• Récord últimos 14 días: Carolina Hurricanes 66.7% vs New Jersey Devils 83.3%\n• Récord últimos 5 días: Carolina Hurricanes 0.0% vs New Jersey Devils 100.0% (mayor peso)\n• Promedio puntos/goles últimos 5 partidos: Carolina Hurricanes 2.0 a favor / 5.0 en contra | New Jersey Devils 5.0 a favor / 3.0 en contra\n• Ventaja de localía: +5% en la probabilidad\n\n⚠️ Partido muy equilibrado, pequeña ventaja por localía y últimos resultados.",
+          "analista": "Analista Avanzado",
+          "resultado_real": null,
+          "acerto": null,
+          "monto_invertido": 0.01503968253968254
+        }
+      ],
+      "monto_total": 0.5,
+      "odds": 1.5,
+      "estado": "perdido",
+      "ganancia_neta": -0.5
     }
   ]
 }

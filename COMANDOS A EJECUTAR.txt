@@ -3,10 +3,13 @@ COMANDOS DISPONIBLES
    python main.py --status       - Muestra capital y predicciones anteriores
    python main.py --update       - Actualiza resultados del día anterior
    python main.py --compare      - Compara rendimiento de analistas
-   python main.py --ticket       - Crea un ticket con juegos seleccionados
+   python main.py --create-ticket      - Crea un ticket con juegos seleccionados
    python main.py --help         - Muestra ayuda
    python main.py --list-tickets - Lista de Tickets
    python main.py --report       - Genera Reportes de Analistas
    python main.py --soccer       - Analista Futbol
    python main.py --analyze-tickets  - Analizar Tickets
+   python main.py --evaluate-ticket - Evaluar ticket
+   python main.py --suggest-ticket - Sugerencia ticket
+   python main.py --excel          - Analizar Excel
    Remove-Item estado.json       - BORRA DATOS DE APUESTAS

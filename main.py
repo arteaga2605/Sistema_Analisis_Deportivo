@@ -9,11 +9,13 @@ from models.ticket import Ticket
 from analista import AnalistaDeportivo
 from analista_alternativo import AnalistaAlternativo
 from analista_futbol import AnalistaFutbol
+from analista_excel import AnalistaExcel          # <-- NUEVO
 from gestor import GestorRiesgo
 from apis import get_schedule_by_date, get_game_details
 from config import USE_MULTI_PROVIDER, UMBRAL_PROBABILIDAD
 from auditor import AuditorResultados
-from analista_tickets import TicketAnalyst   # <-- NUEVO
+from analista_tickets import TicketAnalyst
+from asesor_apuestas import AsesorApuestas
 from animacion import mostrar_animacion
 
 if USE_MULTI_PROVIDER:
@@ -326,6 +328,70 @@ def analizar_tickets():
     analista.analizar_tickets_activos()
 
 
+def evaluar_ticket():
+    """Evalúa la probabilidad real de un ticket seleccionado por el usuario."""
+    mostrar_animacion('evaluate')
+    print("=== EVALUACIÓN DE TICKET PERSONALIZADO ===")
+    
+    estado = Estado()
+    hoy = date.today()
+    predicciones_hoy = estado.obtener_predicciones_por_fecha(hoy)
+    if not predicciones_hoy:
+        print("No hay predicciones para hoy. Ejecute primero '--predict'.")
+        return
+    
+    print("\nPredicciones disponibles:")
+    for idx, pred in enumerate(predicciones_hoy, 1):
+        print(f"{idx}. {pred.equipo_local} vs {pred.equipo_visitante} -> {pred.ganador_predicho} ({pred.probabilidad*100:.1f}%)")
+    
+    seleccion = input("\nIngrese los números de las predicciones a evaluar (separados por comas, ej: 1,3,5): ")
+    try:
+        indices = [int(x.strip()) for x in seleccion.split(',')]
+    except:
+        print("Entrada inválida.")
+        return
+    
+    asesor = AsesorApuestas()
+    evaluacion = asesor.evaluar_seleccion(indices, hoy)
+    asesor.mostrar_evaluacion(evaluacion)
+
+
+def sugerir_ticket():
+    """Sugiere el ticket de 3 juegos más probable del día."""
+    mostrar_animacion('suggest')
+    print("=== SUGERENCIA DE TICKET ÓPTIMO ===")
+    asesor = AsesorApuestas()
+    sugerencia = asesor.sugerir_ticket_optimo(date.today(), num_juegos=3)
+    asesor.mostrar_sugerencia(sugerencia)
+
+
+def ejecutar_analisis_excel():
+    """Ejecuta el analista offline basado en Excel."""
+    mostrar_animacion('excel')
+    print("=== ANÁLISIS OFFLINE CON EXCEL ===")
+    analista = AnalistaExcel()
+    hoy = date.today()
+    predicciones = analista.analizar_juegos_dia(hoy)
+    if not predicciones:
+        print("No hay predicciones con suficiente probabilidad para hoy.")
+        return
+
+    print("\n📊 PREDICCIONES BASADAS EN EXCEL (OFFLINE):")
+    print("=" * 90)
+    for pred in predicciones:
+        condicion = "🏠 LOCAL" if pred.ganador_predicho == pred.equipo_local else "✈️ VISITANTE"
+        print(f"🎯 [{pred.analista}] {pred.deporte} | {pred.equipo_local} vs {pred.equipo_visitante}")
+        print(f"   📈 Predicción: {pred.ganador_predicho} ({condicion}) con {pred.probabilidad*100:.1f}%")
+        print(f"   💬 Comentario: {pred.comentario}")
+        print("-" * 90)
+
+    # Guardar predicciones (opcional, para histórico)
+    estado = Estado()
+    for pred in predicciones:
+        estado.agregar_prediccion(pred)
+    print("\n✅ Predicciones guardadas.")
+
+
 def main():
     parser = argparse.ArgumentParser(description='Sistema de análisis deportivo')
     parser.add_argument('--predict', action='store_true', help='Ejecutar fase de predicción (juegos del día)')
@@ -337,6 +403,9 @@ def main():
     parser.add_argument('--report', action='store_true', help='Generar informe de rendimiento (Auditor de Resultados)')
     parser.add_argument('--soccer', action='store_true', help='Ejecutar análisis exclusivo de fútbol (Analista Fútbol)')
     parser.add_argument('--analyze-tickets', action='store_true', help='Analizar tickets activos (probabilidad real + sentimiento social)')
+    parser.add_argument('--evaluate-ticket', action='store_true', help='Evaluar probabilidad real de un ticket seleccionado manualmente')
+    parser.add_argument('--suggest-ticket', action='store_true', help='Sugerir el ticket de 3 juegos más probable del día')
+    parser.add_argument('--excel', action='store_true', help='Ejecutar análisis offline basado en archivo Excel')
     args = parser.parse_args()
 
     if args.predict:
@@ -360,6 +429,12 @@ def main():
         ejecutar_prediccion_soccer()
     elif args.analyze_tickets:
         analizar_tickets()
+    elif args.evaluate_ticket:
+        evaluar_ticket()
+    elif args.suggest_ticket:
+        sugerir_ticket()
+    elif args.excel:
+        ejecutar_analisis_excel()
     else:
         parser.print_help()
 
