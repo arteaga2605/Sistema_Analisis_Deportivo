@@ -120,6 +120,9 @@ def ejecutar_prediccion():
     predicciones2 = analista2.analizar_juegos_dia(hoy)
     todas_predicciones = predicciones1 + predicciones2
 
+    # ORDENAR PREDICCIONES DE MAYOR A MENOR PROBABILIDAD
+    todas_predicciones.sort(key=lambda p: p.probabilidad, reverse=True)
+
     if not todas_predicciones:
         print("No hay predicciones con suficiente probabilidad para hoy.")
         return
@@ -152,12 +155,16 @@ def crear_ticket():
     estado = Estado()
     hoy = date.today()
     predicciones_hoy = estado.obtener_predicciones_por_fecha(hoy)
+    
+    # ORDENAR PREDICCIONES DE MAYOR A MENOR PROBABILIDAD
+    predicciones_hoy.sort(key=lambda p: p.probabilidad, reverse=True)
+    
     if not predicciones_hoy:
         print("No hay predicciones para hoy. Ejecute primero '--predict'.")
         return
 
     print("\n=== CREAR TICKET ===")
-    print("Predicciones disponibles para hoy:")
+    print("Predicciones disponibles para hoy (ordenadas de mayor a menor probabilidad):")
     for idx, pred in enumerate(predicciones_hoy, 1):
         print(f"{idx}. [{pred.analista}] {pred.deporte} | {pred.equipo_local} vs {pred.equipo_visitante}")
         print(f"   Predicción: {pred.ganador_predicho} ({pred.probabilidad*100:.1f}%)")
