@@ -8,7 +8,7 @@ from models import Estado, Prediccion
 from models.ticket import Ticket
 from analista import AnalistaDeportivo
 from analista_alternativo import AnalistaAlternativo
-from analista_futbol import AnalistaFutbol
+from analista_futbol import AnalistaFutbol, DEFAULT_FOOTBALL_DATA_KEY, DEFAULT_API_FOOTBALL_KEY
 from analista_excel import AnalistaExcel          # <-- NUEVO
 from gestor import GestorRiesgo
 from apis import get_schedule_by_date, get_game_details
@@ -306,7 +306,13 @@ def ejecutar_prediccion_soccer():
     mostrar_animacion('soccer')
     print("=== ANÁLISIS EXCLUSIVO DE FÚTBOL ===")
     estado = Estado()
-    analista = AnalistaFutbol()
+    
+    # Instanciar con las API keys configuradas
+    analista = AnalistaFutbol(
+        api_football_key=DEFAULT_API_FOOTBALL_KEY,
+        football_data_key=DEFAULT_FOOTBALL_DATA_KEY
+    )
+    
     hoy = date.today()
     predicciones = analista.analizar_juegos_dia(hoy)
     if not predicciones:
